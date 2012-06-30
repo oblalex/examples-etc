@@ -1,6 +1,7 @@
 #!/bin/bash
 
-OUT_DIR="classes"
+OUT_EXEC="helloWorld"
+OUT_DIR="out"
 
 if [ "$#" == 0 ] || [ "$1" == "+run" ]; then  
   if [ ! -d "$OUT_DIR" ]; then
@@ -9,14 +10,14 @@ if [ "$#" == 0 ] || [ "$1" == "+run" ]; then
   fi
 
   echo "Compilling..."
-  scalac -d "$OUT_DIR" HelloWorld.scala  
+  ghc --make -O2 main.hs -o "$OUT_DIR/$OUT_EXEC" -outputdir "$OUT_DIR"
 fi
 
 echo "$1" | grep -q "run"
 
 if [ "$?" == 0 ]; then
   echo "Running..."
-  scala -classpath "$OUT_DIR" HelloWorld
+  ./"$OUT_DIR/$OUT_EXEC"
 fi
 
 if [ "$1" == "clean" ]; then

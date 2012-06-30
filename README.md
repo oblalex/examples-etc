@@ -9,6 +9,7 @@ This is a set of different examples written in different languages. The purpose 
  * [Python 3]
  * [Scala]
  * [Ruby]
+ * [Haskell]
 
 ## Running examples
 
@@ -58,9 +59,23 @@ Run file:
 
 >ruby ./file_name.rb
 
+### Haskell
+ 1. Compile:
+ > bash make.sh
+ 
+ 2. Run:
+ > bash make.sh run
+
+ 3. Or compile+run:
+ > bash make.sh +run
+
+ 4. Clean (optionally):
+ > bash make.sh clean
+
 [GNU Octave]:http://www.gnu.org/software/octave/doc/interpreter/index.html
 [GNU C]:http://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html
 [GNU Make]:http://www.gnu.org/software/make/manual/make.html
 [Python 3]:http://docs.python.org/py3k/
 [Scala]:http://www.scala-lang.org/node/197
-[Ruby]:http://www.ruby-lang.org/en/documentation/
+[Ruby]:http://www.ruby-lang.org/en/documentation
+[Haskell]:http://www.haskell.org/haskellwiki/Haskell
