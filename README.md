@@ -5,6 +5,7 @@ This is a set of different examples written in different languages. The purpose 
 ## Used languages
 
 * [GNU Octave]
+* [GNU C]
 
 ## Running examples
 
@@ -15,4 +16,18 @@ This is a set of different examples written in different languages. The purpose 
 * If Octave is already started type:
 > source file_name.m
 
+### GNU C
+ 1. Go to the source directory. 
+ 2. Compile source via [GNU Make] by running command
+> make
+
+ 3. Run program:
+>./program_name
+
+ 4. Clean directory (optionally):
+>make clean
+
+
 [GNU Octave]:http://www.gnu.org/software/octave/doc/interpreter/index.html
+[GNU C]:http://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html
+[GNU Make]:http://www.gnu.org/software/make/manual/make.html
