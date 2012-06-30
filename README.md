@@ -39,6 +39,7 @@ Run file:
 >scala ClassName.scala
 
 * or:
+
  1. Compile:
  > bash make.sh
  
