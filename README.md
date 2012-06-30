@@ -17,6 +17,12 @@ This is a set of different examples written in different languages. The purpose 
 * Run from the command line:
 > octave file_name.m
 
+* If your Octave is located at
+> /usr/bin/octave
+
+ then you can just run it as executable:
+> ./file_name.m
+
 * If Octave is already started type:
 > source file_name.m
 
