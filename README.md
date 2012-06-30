@@ -30,7 +30,7 @@ This is a set of different examples written in different languages. The purpose 
 
 ### Python 3
 
-* Run file:
+Run file:
 
 >python3 ./file_name.py
 
