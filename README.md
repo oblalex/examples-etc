@@ -4,8 +4,9 @@ This is a set of different examples written in different languages. The purpose 
 
 ## Used languages
 
-* [GNU Octave]
-* [GNU C]
+ * [GNU Octave]
+ * [GNU C]
+ * [Python 3]
 
 ## Running examples
 
@@ -27,7 +28,11 @@ This is a set of different examples written in different languages. The purpose 
  4. Clean directory (optionally):
 >make clean
 
+### Python 3
+* Run file:
+>python3 ./file_name.py
 
 [GNU Octave]:http://www.gnu.org/software/octave/doc/interpreter/index.html
 [GNU C]:http://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html
 [GNU Make]:http://www.gnu.org/software/make/manual/make.html
+[Python 3]:http://docs.python.org/py3k/
