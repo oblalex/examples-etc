@@ -1,9 +1,11 @@
 CC=gcc
 CFLAGS=-Wall
 
+PROG_NAME="helloWorld"
+
 main: main.c
-	gcc main.c -o helloWorld
+	$(CC) $(CFLAGS) main.c -o $(PROG_NAME)
 
 clean:
-	rm -f main.o helloWorld
+	rm -f main.o $(PROG_NAME)
 
