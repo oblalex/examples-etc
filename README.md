@@ -11,6 +11,7 @@ This is a set of different examples written in different languages. The purpose 
  * [Ruby]
  * [Haskell]
  * [Lua]
+ * [Clojure]
 
 ## Running examples
 
@@ -35,7 +36,7 @@ or file as executable:
 ### Python 3
 Run file:
 
->python3 ./file_name.py
+>python3 file_name.py
 
 ### Scala
 
@@ -74,6 +75,13 @@ Run file:
 
 >lua ./file_name.lua
 
+### Clojure
+
+1. Install [Leiningen].
+2. Go to the project directory.
+3. Run:
+ > lein run
+
 [GNU Octave]:http://www.gnu.org/software/octave/doc/interpreter/index.html
 [GNU C]:http://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html
 [GNU Make]:http://www.gnu.org/software/make/manual/make.html
@@ -82,3 +90,5 @@ Run file:
 [Ruby]:http://www.ruby-lang.org/en/documentation
 [Haskell]:http://www.haskell.org/haskellwiki/Haskell
 [Lua]:http://www.lua.org/
+[Clojure]:http://clojure.org/
+[Leiningen]:https://github.com/technomancy/leiningen#readme
