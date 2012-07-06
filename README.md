@@ -12,6 +12,7 @@ This is a set of different examples written in different languages. The purpose 
  * [Haskell]
  * [Lua]
  * [Clojure]
+ * [Perl]
 
 ## Running examples
 
@@ -75,6 +76,11 @@ Run file:
 3. Run:
  > lein run
 
+### Perl
+Run file:
+
+>perl ./file_name.pl
+
 [GNU Octave]:http://www.gnu.org/software/octave/doc/interpreter/index.html
 [GNU C]:http://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html
 [GNU Make]:http://www.gnu.org/software/make/manual/make.html
@@ -86,3 +92,4 @@ Run file:
 [Lua]:http://www.lua.org/
 [Clojure]:http://clojure.org/
 [Leiningen]:https://github.com/technomancy/leiningen#readme
+[Perl]:http://www.perl.org/
