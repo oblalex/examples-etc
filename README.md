@@ -10,15 +10,16 @@ This is a set of different examples written in different languages. The purpose 
  * [Scala]
  * [Ruby]
  * [Haskell]
+ * [Lua]
 
 ## Running examples
 
 ### GNU Octave
-* You can just run file as executable:
-> ./file_name.m
+Run file:
+> octave file_name.m
 
-* If Octave is already started type:
-> source file_name.m
+or file as executable:
+> ./file_name.m
 
 ### GNU C
  1. Go to the source directory. 
@@ -37,10 +38,6 @@ Run file:
 >python3 ./file_name.py
 
 ### Scala
-* Run class
->scala ClassName.scala
-
-* or:
 
  1. Compile:
  > bash make.sh
@@ -72,6 +69,11 @@ Run file:
  4. Clean (optionally):
  > bash make.sh clean
 
+### Lua
+Run file:
+
+>lua ./file_name.lua
+
 [GNU Octave]:http://www.gnu.org/software/octave/doc/interpreter/index.html
 [GNU C]:http://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html
 [GNU Make]:http://www.gnu.org/software/make/manual/make.html
@@ -79,3 +81,4 @@ Run file:
 [Scala]:http://www.scala-lang.org/node/197
 [Ruby]:http://www.ruby-lang.org/en/documentation
 [Haskell]:http://www.haskell.org/haskellwiki/Haskell
+[Lua]:http://www.lua.org/
