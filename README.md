@@ -29,42 +29,39 @@ or file as executable:
 > make
 
  3. Run program:
->./program_name
+> ./program_name
 
  4. Clean directory (optionally):
->make clean
+> make clean
 
 ### Python 3
 Run file:
-
->python3 file_name.py
+> python3 file_name.py
 
 ### Scala
 
  1. Install [sbt].
  2. Go to the project directory. 
  3. Run:
-
 > sbt run
 
 ### Ruby
 Run file:
-
->ruby ./file_name.rb
+> ruby ./file_name.rb
 
 ### Haskell
 1. Install [Cabal].
 2. Go to the project directory.
 3. Run:
- > cabal configure
 
- > cabal build
+> cabal configure
 
- > ./dist/build/project_name/program_name
+> cabal build
+
+> ./dist/build/project_name/program_name
 
 ### Lua
 Run file:
-
 > lua ./file_name.lua
 
 ### Clojure
@@ -77,8 +74,7 @@ Run file:
 
 ### Perl
 Run file:
-
->perl ./file_name.pl
+> perl ./file_name.pl
 
 [GNU Octave]:http://www.gnu.org/software/octave/doc/interpreter/index.html
 [GNU C]:http://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html
