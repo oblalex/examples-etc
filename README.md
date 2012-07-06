@@ -44,6 +44,7 @@ Run file:
  1. Install [sbt].
  2. Go to the project directory. 
  3. Run:
+
 > sbt run
 
 ### Ruby
@@ -52,29 +53,27 @@ Run file:
 >ruby ./file_name.rb
 
 ### Haskell
- 1. Compile:
- > bash make.sh
- 
- 2. Run:
- > bash make.sh run
+1. Install [Cabal].
+2. Go to the project directory.
+3. Run:
+ > cabal configure
 
- 3. Or compile+run:
- > bash make.sh +run
+ > cabal build
 
- 4. Clean (optionally):
- > bash make.sh clean
+ > ./dist/build/project_name/program_name
 
 ### Lua
 Run file:
 
->lua ./file_name.lua
+> lua ./file_name.lua
 
 ### Clojure
 
-1. Install [Leiningen].
-2. Go to the project directory.
-3. Run:
- > lein run
+ 1. Install [Leiningen].
+ 2. Go to the project directory.
+ 3. Run:
+
+> lein run
 
 ### Perl
 Run file:
@@ -89,6 +88,7 @@ Run file:
 [sbt]:https://github.com/harrah/xsbt/wiki
 [Ruby]:http://www.ruby-lang.org/en/documentation
 [Haskell]:http://www.haskell.org/haskellwiki/Haskell
+[Cabal]:http://www.haskell.org/cabal/
 [Lua]:http://www.lua.org/
 [Clojure]:http://clojure.org/
 [Leiningen]:https://github.com/technomancy/leiningen#readme
