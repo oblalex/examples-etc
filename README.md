@@ -14,13 +14,7 @@ This is a set of different examples written in different languages. The purpose 
 ## Running examples
 
 ### GNU Octave
-* Run from the command line:
-> octave file_name.m
-
-* If your Octave is located at
-> /usr/bin/octave
-
- then you can just run it as executable:
+* You can just run file as executable:
 > ./file_name.m
 
 * If Octave is already started type:
