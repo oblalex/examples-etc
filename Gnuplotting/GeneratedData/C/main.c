@@ -1,6 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
-#include "gnuplot_i.h"
 
 // frequency, Hz
 #define F 5
@@ -12,27 +12,27 @@
 #define NSAMPLES SR*SECS
 
 int main ()
-{
-	gnuplot_ctrl* h;
-	h = gnuplot_init();
+{  
+  char fname[64];
+  tmpnam(fname);
+  
+  FILE *f = fopen(fname, "w");
 
-	gnuplot_resetplot(h);
-	gnuplot_setstyle(h, "lines");
-	gnuplot_cmd(h, "set terminal png");
-	gnuplot_cmd(h, "set output \"wave.png\"");
+  double x, y;
+  int i;
+  
+  for (i=0 ; i<NSAMPLES; i++)
+  {
+    x = (double)i/SR;
+    y = (double) sin((double)(x*2*M_PI*F));
+    fprintf (f, "%f\t%f\n", x, y);
+  }
 
-	double x[NSAMPLES];
-	double y[NSAMPLES];
-	int i;
+  fclose(f);  
 
-	for (i=0 ; i<NSAMPLES; i++)
-	{
-		x[i] = (double)i/SR;
-		y[i] = (double) sin((double)(x[i]*2*M_PI*F));
-	}
-
-	gnuplot_plot_xy(h, x, y, NSAMPLES, "Sine wave");
-
-	gnuplot_close(h);
-	return 0;		
+  char cmd[100];
+  sprintf(cmd, "../../plotter.gp %s ./result", fname);
+  system(cmd);
+  
+  return 0;
 }
