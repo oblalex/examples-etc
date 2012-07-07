@@ -10,6 +10,8 @@
 #define SECS 3
 // Overall samples count
 #define NSAMPLES SR*SECS
+// Sine wave coefficient
+#define COEF 2*M_PI*F
 
 int main ()
 {  
@@ -19,12 +21,12 @@ int main ()
   FILE *f = fopen(fname, "w");
 
   double x, y;
-  int i;
+  int i;  
   
   for (i=0 ; i<NSAMPLES; i++)
   {
     x = (double)i/SR;
-    y = (double) sin((double)(x*2*M_PI*F));
+    y = (double) sin((double)(x*COEF));
     fprintf (f, "%f\t%f\n", x, y);
   }
 
