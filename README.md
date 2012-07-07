@@ -13,6 +13,7 @@ This is a set of different examples written in different languages. The purpose 
  * [Lua]
  * [Clojure]
  * [Perl]
+ * [Go]
 
 ## Running examples
 
@@ -65,16 +66,19 @@ Run file:
 > lua ./file_name.lua
 
 ### Clojure
-
- 1. Install [Leiningen].
- 2. Go to the project directory.
- 3. Run:
+1. Install [Leiningen].
+2. Go to the project directory.
+3. Run:
 
 > lein run
 
 ### Perl
 Run file:
 > perl ./file_name.pl
+
+### Go
+Run file:
+> go run ./file_name.go
 
 [GNU Octave]:http://www.gnu.org/software/octave/doc/interpreter/index.html
 [GNU C]:http://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html
@@ -84,8 +88,9 @@ Run file:
 [sbt]:https://github.com/harrah/xsbt/wiki
 [Ruby]:http://www.ruby-lang.org/en/documentation
 [Haskell]:http://www.haskell.org/haskellwiki/Haskell
-[Cabal]:http://www.haskell.org/cabal/
-[Lua]:http://www.lua.org/
-[Clojure]:http://clojure.org/
+[Cabal]:http://www.haskell.org/cabal
+[Lua]:http://www.lua.org
+[Clojure]:http://clojure.org
 [Leiningen]:https://github.com/technomancy/leiningen#readme
-[Perl]:http://www.perl.org/
+[Perl]:http://www.perl.org
+[Go]:http://golang.org
