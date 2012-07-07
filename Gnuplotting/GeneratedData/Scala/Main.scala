@@ -28,6 +28,6 @@ object Main {
                 }
                 
                 writer.close()
-                Runtime.getRuntime().exec("../../plotter.gp "+f.getAbsolutePath()+" ./result");
+                Runtime.getRuntime().exec("../../plotter.gp "+f.getAbsolutePath()+" ./result")
         }
 }
