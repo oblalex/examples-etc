@@ -40,10 +40,10 @@ Run file:
 > python3 file_name.py
 
 ### Scala
+1. Install [sbt].
+2. Go to the project directory. 
+3. Run:
 
- 1. Install [sbt].
- 2. Go to the project directory. 
- 3. Run:
 > sbt run
 
 ### Ruby
