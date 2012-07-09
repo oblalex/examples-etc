@@ -1,0 +1,9 @@
+name:                dataPlotting
+version:             0.1.0.0
+license:             LGPL-3
+build-type:          Simple
+cabal-version:       >=1.8
+
+executable dataPlotting
+  main-is: main.hs            
+  build-depends:       base ==4.5.*, process, directory

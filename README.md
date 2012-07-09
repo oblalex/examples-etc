@@ -48,9 +48,15 @@ Run file:
 
 ### Ruby
 Run file:
-> ruby ./file_name.rb
+> ruby file_name.rb
 
 ### Haskell
+Run as script:
+
+> runghc file_name.hs
+
+or
+
 1. Install [Cabal].
 2. Go to the project directory.
 3. Run:
@@ -63,7 +69,7 @@ Run file:
 
 ### Lua
 Run file:
-> lua ./file_name.lua
+> lua file_name.lua
 
 ### Clojure
 1. Install [Leiningen].
@@ -74,11 +80,11 @@ Run file:
 
 ### Perl
 Run file:
-> perl ./file_name.pl
+> perl file_name.pl
 
 ### Go
 Run file:
-> go run ./file_name.go
+> go run file_name.go
 
 [GNU Octave]:http://www.gnu.org/software/octave/doc/interpreter/index.html
 [GNU C]:http://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html
