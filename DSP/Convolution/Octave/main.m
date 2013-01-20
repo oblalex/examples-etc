@@ -9,7 +9,13 @@ h = sscanf(fgets(fid), '%f');
 
 fclose(fid);
 
-% Input Side Algorithm
+% NOTE:
+% Length of the result will be equal to "length(x)+length(h)-1"
+
+% Calculus
+
+% Input Side Algorithm:
+% Tells how each input sample affects on the output samples
 
 y_is = zeros(1, (length(x)+length(h)));
 
@@ -19,16 +25,8 @@ for i=1:length(x),
     end;
 end;
 
-td = 0:length(y_is)-2;
-subplot(3, 1, 1);
-plot(td, y_is(2:length(y_is)), 'or');
-grid on
-axis([0 length(td)-1 min(y_is)+min(y_is)*0.2 max(y_is)+max(y_is)*0.2]);
-title('The Input Side Algorithm');
-xlabel('Samples');
-ylabel('Value');
-
 % Output Side Algorithm
+% Tells which input samples affected on the single output sample
 
 y_os = zeros(1, (length(x)+length(h)));
 
@@ -41,26 +39,57 @@ for i=1:length(y_os),
     end;
 end;
 
-subplot(3, 1, 2);
-plot(td, y_os(2:length(y_os)), 'ob');
+% Displaying
+
+y_range_amplifier = 1.5;
+
+td = 0:length(x)-1;
+
+subplot(4, 2, 1);
+plot(td, x(1:length(x)), 'o');
 grid on
-axis([0 length(td)-1 min(y_os)+min(y_os)*0.2 max(y_os)+max(y_os)*0.2]);
-title('The Output Side Algorithm');
-xlabel('Samples');
+y_range = max(abs(min(x)), abs(max(x)))*y_range_amplifier;
+axis([0 length(td)-1 -y_range y_range]);
+title('Input signal');
 ylabel('Value');
 
-% Display difference
+td = 0:length(h)-1;
 
-subplot(3, 1, 3);
+subplot(4, 2, 2);
+plot(td, h(1:length(h)), 'o');
+grid on
+y_range = max(abs(min(h)), abs(max(h)))*y_range_amplifier;
+axis([0 length(td)-1 -y_range y_range]);
+title('Impulse response');
+ylabel('Value');
+
+td = 0:length(y_is)-2;
+
+subplot(4, 2, 3:4);
+plot(td, y_is(2:length(y_is)), 'or');
+grid on
+y_range = max(abs(min(y_is)), abs(max(y_is)))*y_range_amplifier;
+axis([0 length(td)-1 -y_range y_range]);
+title('The Input Side Algorithm');
+ylabel('Value');
+
+subplot(4, 2, 5:6);
+plot(td, y_os(2:length(y_os)), 'ob');
+grid on
+y_range = max(abs(min(y_os)), abs(max(y_os)))*y_range_amplifier;
+axis([0 length(td)-1 -y_range y_range]);
+title('The Output Side Algorithm');
+ylabel('Value');
+
+subplot(4, 2, 7:8);
 diff = y_is-y_os;
 plot(td, diff(2:length(diff)), 'om');
 grid on
-axis([0 length(td)-1 min(diff)+min(diff)*0.2 max(diff)+max(diff)*0.2]);
+y_range = max(abs(min(diff)), abs(max(diff)))*y_range_amplifier;
+axis([0 length(td)-1 -y_range y_range]);
 title('Difference');
-xlabel('Samples');
 ylabel('Value');
 
-% Footer
 
 printf("Press any key to exit..");
 pause
