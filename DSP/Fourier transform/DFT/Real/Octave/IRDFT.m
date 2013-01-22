@@ -1,6 +1,7 @@
 #! /usr/bin/octave -qf
 
 % Inverse Real DFT
+% Pulse signal synthesize
 
 % Time domain length
 td_length = 32;
@@ -11,7 +12,7 @@ fd_length = (td_length/2)+1;
 % Prepare empty result buffer
 X = zeros(1, td_length);
 
-% Prepare frequency domain (randomly taken data)
+% Prepare frequency domain
 ReX = ones(1, fd_length);
 ImX = zeros(1, fd_length);
 
@@ -26,6 +27,8 @@ ImX_ = double(ImX)/t;
 ReX_(1) = ReX_(1)/2;
 ReX_(length(ReX_)) = ReX_(length(ReX_))/2;
 
+% Generating output
+
 t = 2*pi/td_length;
 
 for k=1:fd_length,
@@ -36,6 +39,7 @@ for k=1:fd_length,
 end;
 
 % Displaying
+
 y_range_amplifier = 1.3;
 
 td = 0:fd_length-1;
